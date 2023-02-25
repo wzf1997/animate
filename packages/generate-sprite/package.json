@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/wzf1997/animate/tree/main",
   "publishConfig": {
-    "registry": "https://registry.npmmirror.com"
+    "registry": "https://registry.npmjs.org/"
   },
   "exports": {
     "require": "./dist/index.js",

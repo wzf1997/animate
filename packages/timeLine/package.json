@@ -1,6 +1,6 @@
 {
   "name": "@fly/timeline",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "基于时间线的前端动画管理sdk",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/wzf1997/animate/tree/main",
   "publishConfig": {
-    "registry": "https://registry.npmmirror.com"
+    "registry": "https://registry.npmjs.org/"
   },
   "exports": {
     "require": "./dist/index.js",
@@ -26,7 +26,11 @@
     "build": "tsup"
   },
   "sideEffects": false,
-  "keywords": ["timeline", "animate", "js"],
+  "keywords": [
+    "timeline",
+    "animate",
+    "js"
+  ],
   "author": "wzf1997",
   "license": "ISC"
 }
