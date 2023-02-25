@@ -1,0 +1,64 @@
+{
+  "name": "fly-animate",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "clean": "rm -rf node_modules **/*/node_modules",
+    "prerelease": "pnpm  changeset pre enter  alpha",
+    "exitrelease": "pnpm  changeset pre exit alpha",
+    "postinstall": "husky install",
+    "changeset": "changeset",
+    "vp": "changeset version",
+    "build": "pnpm  -r --filter=@fly/* run build",
+    "release": "pnpm build &&  pnpm release:only",
+    "release:only": "pnpm  changeset publish --registry https://registry.npmmirror.com"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.25.2",
+    "@commitlint/cli": "^17.2.0",
+    "inquirer": "*",
+    "@commitlint/config-conventional": "^17.2.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "readme-md-generator": "1.0.0",
+    "eslint": "^7.0.0",
+    "tsdoc-markdown": "0.0.1",
+    "@types/prettier": "2.7.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-sonarjs": "^0.10.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "only-allow": "^1.1.1",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.0.0",
+    "tsup": "^6.4.0",
+    "tsx": "^3.12.0",
+    "turbo": "^1.6.3",
+    "typescript": "^4.8.4"
+  },
+  "lint-staged": {
+    "*.@(js|ts|tsx)": [
+      "eslint  --cache --ext .ts,.tsx,.js --fix",
+      "prettier --write"
+    ],
+    "*.@(yml|yaml)": [
+      "prettier --parser yaml --write"
+    ],
+    "*.md": [
+      "prettier --parser markdown --write"
+    ]
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

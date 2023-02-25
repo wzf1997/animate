@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["es5", "es6", "dom", "es2019", "ES2020"],
+    "module": "esnext",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "moduleResolution": "nodenext",
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "skipLibCheck": true
+  },
+  "includes": ["./src/**/*"]
+}

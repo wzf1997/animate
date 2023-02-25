@@ -1,0 +1,40 @@
+{
+  "name": "@fly/generate-sprite",
+  "version": "0.0.0",
+  "description": "基于tinify生成雪碧图的工具",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": "dis/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wzf1997/animate/tree/main"
+  },
+  "homepage": "https://github.com/wzf1997/animate/tree/main",
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com"
+  },
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs",
+    "types": "./dist/index.d.ts"
+  },
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "sideEffects": false,
+  "keywords": [],
+  "author": "wzf1997",
+  "dependencies": {
+    "sharp": "*",
+    "tinify": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.1"
+  },
+  "license": "ISC"
+}
