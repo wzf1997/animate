@@ -14,7 +14,7 @@
     "vp": "changeset version",
     "build": "pnpm  -r --filter=@fly/* run build",
     "release": "pnpm build &&  pnpm release:only",
-    "release:only": "pnpm  changeset publish --registry https://registry.npmjs.org/"
+    "release:only": "pnpm  changeset publish --registry http://registry.npmjs.org"
   },
   "keywords": [],
   "author": "",

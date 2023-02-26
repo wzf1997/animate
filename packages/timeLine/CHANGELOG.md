@@ -1,5 +1,11 @@
 # @fly/timeline
 
+## 1.0.2
+
+### Patch Changes
+
+- markdown 完善 + ts 类型修改
+
 ## 1.0.0
 
 ### Major Changes

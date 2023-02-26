@@ -11,14 +11,13 @@ export interface TimeLineTask {
   onProgress?: (arg: number) => void
   easingFunc?: (amount: number) => number
   /**当前重复的callback */
-  onRepeat: (arg: number) => void
+  onRepeat?: (arg: number) => void
   onFinsh?: (arg: TimeLine) => void
   onStart?: () => void
 }
 
 export class TimeLine {
-  onUpdateHandler?: (arg?: any) => void
-  onFinshHandler?: (arg?: any) => void
+  private onFinshHandler?: (arg?: any) => void
   private pauseTime: number | undefined
   private startTime: number | undefined
   private readonly tasks: TimeLineTask[]
@@ -45,7 +44,7 @@ export class TimeLine {
     return this
   }
 
-  update(time = now()) {
+  private update(time = now()) {
     // 暂停状态
     if (this.isPaused) {
       return
@@ -102,11 +101,6 @@ export class TimeLine {
     }
 
     loop(this.update.bind(this))
-  }
-
-  onUpdate(updateFunc: (arg: any) => void) {
-    this.onUpdateHandler = updateFunc
-    return this
   }
 
   onFinsh(onFinshFunc: (obj: any) => void) {

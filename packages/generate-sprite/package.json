@@ -1,5 +1,5 @@
 {
-  "name": "@fly/generate-sprite",
+  "name": "fly-generate-sprite",
   "version": "0.0.0",
   "description": "基于tinify生成雪碧图的工具",
   "main": "dist/index.js",
@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/wzf1997/animate/tree/main",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org"
   },
   "exports": {
     "require": "./dist/index.js",
@@ -28,7 +28,7 @@
   },
   "sideEffects": false,
   "keywords": [],
-  "author": "wzf1997",
+  "author": "wangzhengfei",
   "dependencies": {
     "sharp": "*",
     "tinify": "*"
