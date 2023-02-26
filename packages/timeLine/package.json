@@ -1,6 +1,6 @@
 {
   "name": "fly-timeline",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "基于时间线的前端动画管理sdk",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",

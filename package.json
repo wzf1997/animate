@@ -12,7 +12,7 @@
     "postinstall": "husky install",
     "changeset": "changeset",
     "vp": "changeset version",
-    "build": "pnpm  -r --filter=@fly/* run build",
+    "build": "pnpm  -r --filter=fly* run build",
     "release": "pnpm build &&  pnpm release:only",
     "release:only": "pnpm  changeset publish --registry http://registry.npmjs.org"
   },
