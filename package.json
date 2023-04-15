@@ -15,7 +15,7 @@
     "turbo:clean": "rimraf .turbo",
     "lazy:clean": "rimraf .lazy",
     "build:lazy": "turbo build",
-    "release": "build:lazy &&  pnpm release:only",
+    "release": "pnpm build:lazy &&  pnpm release:only",
     "release:only": "pnpm  changeset publish --registry http://registry.npmjs.org"
   },
   "keywords": [],
