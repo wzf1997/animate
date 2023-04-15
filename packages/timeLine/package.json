@@ -23,7 +23,7 @@
     "*.d.ts"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup --config ../scripts/tsup.config.ts"
   },
   "sideEffects": false,
   "keywords": [

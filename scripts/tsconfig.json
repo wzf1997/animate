@@ -3,5 +3,5 @@
   "compilerOptions": {
     "moduleResolution": "Node"
   },
-  "include": ["./**/*"]
+  "include": ["./**/*", "../tsup.config copy.ts", "../tsup.config copy.ts"]
 }

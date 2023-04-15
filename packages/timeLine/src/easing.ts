@@ -2,6 +2,9 @@ export type EasingFunction = (amount: number) => number
 
 /**
  * 内置了一些缓动函数
+ * In：从0开始加速的缓动，想象OOXX进去，探路要花时间，因此肯定是先慢后快的；
+Out：减速到0的缓动，想象OOXX出来，肯定定先快后慢的，以防掉出来；
+InOut：前半段从0开始加速，后半段减速到0的缓动，想象OOXX进进出出，先慢后快然后再慢
  */
 export const Easing = {
   Linear: {

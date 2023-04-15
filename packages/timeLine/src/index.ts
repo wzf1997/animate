@@ -14,6 +14,8 @@ export interface TimeLineTask {
   onRepeat?: (arg: number) => void
   onFinsh?: (arg: TimeLine) => void
   onStart?: () => void
+  /** 暂停时回调当前 所给的进度 是多少 */
+  onPause?: (arg: number) => void
 }
 
 export class TimeLine {
@@ -75,16 +77,13 @@ export class TimeLine {
       this.repeat = repeat ?? 0
       this.onStartCallbackFired = true
     }
-
-    let elapsed = (time - (this.startTime ?? now()) - delay) / duration
+    let elapsed = (time - (this.startTime ?? now()) - this.repeat === 0 ? delay : 0) / duration
     elapsed = duration === 0 || elapsed > 1 ? 1 : elapsed
 
     if (elapsed > 0) {
       const value = easingFunc(elapsed)
       onProgress?.(value)
-    }
-
-    if (elapsed >= 1) {
+    } else if (elapsed >= 1) {
       if (this.repeat === 0) {
         this.onStartCallbackFired = false
         // 移除当前任务 同时结束
@@ -111,6 +110,16 @@ export class TimeLine {
   // 动画暂停
   pause(time = now()) {
     this.pauseTime = time
+    const curAnimate = this.tasks[0]
+    if (curAnimate && curAnimate.onPause) {
+      const { onPause, delay, duration, easingFunc } = curAnimate
+      let elapsed = (time - (this.startTime ?? now()) - delay) / duration
+      elapsed = duration === 0 || elapsed > 1 ? 1 : elapsed
+      if (elapsed > 0) {
+        const value = easingFunc(elapsed)
+        onPause?.(value)
+      }
+    }
     this.isPaused = true
     return this
   }

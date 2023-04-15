@@ -1,0 +1,42 @@
+{
+  "name": "esbuild-import-loader",
+  "version": "1.0.6",
+  "description": "esbuild 编译tsx, 支持按需加载",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup --config ../scripts/tsup.config.ts"
+
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/wzf1997/animate/tree/main/packages/esbuild-import-loader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wzf1997/animate/tree/main/packages/esbuild-import-loader"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wzf1997/fly/issues"
+  },
+  "keywords": ["esbuild", "import", "webpack", "loader"],
+  "devDependencies": {
+    "@types/babel__traverse": "^7.18.0"
+  },
+  "peerDependencies": {
+    "webpack": "^5.0.0",
+    "babel": "^6.0.0"
+  },
+  "files": ["dist/", "README.md", "CHANGE_LOG.md"],
+  "dependencies": {
+    "esbuild": "^0.15.5",
+    "@babel/generator": "^7.18.13",
+    "@babel/parser": "^7.18.13",
+    "@babel/types": "^7.17.0",
+    "@babel/traverse": "^7.18.13",
+    "@babel/helper-module-imports": "^7.12.13"
+  }
+}

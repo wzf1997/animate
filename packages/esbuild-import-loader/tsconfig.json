@@ -1,0 +1,16 @@
+
+
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["es5", "es6", "dom", "es2019", "ES2020"],
+    "module": "esnext",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "moduleResolution": "nodenext",
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "skipLibCheck": true
+  },
+  "include": ["./src/**/*.ts", "./type.ts"] // * 匹配0或者多个字符 （不包括目录分割符） **/递归匹配任意子目录
+}

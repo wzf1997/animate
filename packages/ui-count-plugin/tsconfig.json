@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "ESNext",
+    "outDir": "./dist",
+    "moduleResolution": "nodenext"
+  },
+  "include": ["./src/**/*.ts"] // * 匹配0或者多个字符 （不包括目录分割符） **/递归匹配任意子目录
+}
